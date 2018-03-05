@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:gravity="center"
+	android:id="@+id/logRelativeLayout">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="地图设定"
+		android:id="@+id/logTextView1"
+		android:textSize="30sp"
+		android:textColor="#FF7F92"
+		android:layout_centerVertical="true"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="宽:"
+		android:layout_below="@id/logTextView1"
+		android:id="@+id/logTextView2"
+		android:textSize="25sp"
+		android:layout_marginTop="15dp"
+		android:textColor="#FF7F92"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:ems="10"
+		android:layout_toRightOf="@id/logTextView2"
+		android:layout_alignTop="@id/logTextView2"
+		android:id="@+id/logEdit_width"
+		android:layout_marginLeft="15dp"
+		android:inputType="number"
+		android:hint="最好少一点哦233"
+		android:textColorHint="#CA88FB"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="高:"
+		android:layout_below="@id/logEdit_width"
+		android:id="@+id/logTextView3"
+		android:textSize="25sp"
+		android:layout_alignLeft="@id/logTextView2"
+		android:layout_marginTop="15dp"
+		android:textColor="#FF7F92"/>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:ems="10"
+		android:layout_toRightOf="@id/logTextView3"
+		android:layout_alignTop="@id/logTextView3"
+		android:id="@+id/logEdit_height"
+		android:layout_alignLeft="@id/logEdit_width"
+		android:inputType="number"
+		android:hint="高比宽多一点吧？@.@"
+		android:textColorHint="#A7F0E7"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Ok"
+		android:layout_below="@id/logEdit_height"
+		android:layout_alignLeft="@id/logEdit_height"
+		android:layout_marginTop="15dp"
+		android:onClick="click_Ok"
+		style="@style/AppTheme"
+		android:id="@+id/logButton1"
+		android:background="@drawable/block"
+		android:textColor="#FA2347"/>
+
+	<com.facebook.shimmer.ShimmerFrameLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/ShimmerFrameLayout"
+		android:layout_below="@id/logButton1"
+		android:layout_marginLeft="140dp">
+
+		<TextView
+			android:text="__desined by DWI"
+			android:layout_width="wrap_content"
+			android:textSize="16sp"
+			android:textColor="#ffffff"
+			android:layout_gravity="center"
+			android:layout_height="wrap_content"
+			android:id="@+id/STextView"/>
+
+	</com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>
+

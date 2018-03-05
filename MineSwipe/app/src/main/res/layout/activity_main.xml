@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/activity_main"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+	<LinearLayout
+		android:id="@+id/title_linear"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/textView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="时间："
+			android:textColor="@color/font"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:id="@+id/time_view"
+			android:textSize="20sp"
+			android:text="0"
+			android:textColor="@color/font"/>
+
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center_vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="进度："
+					android:textColor="@color/font"
+					android:layout_marginLeft="10dp"/>
+
+				<com.daimajia.numberprogressbar.NumberProgressBar
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:id="@+id/progress_view"
+					custom:progress_unreached_color="#CCCCCC"
+					custom:progress_reached_color="#3498DB"
+
+					custom:progress_unreached_bar_height="0.75dp"
+					custom:progress_reached_bar_height="1.5dp"
+
+					custom:progress_text_size="10sp"
+					custom:progress_text_color="#3498DB"
+					custom:progress_text_offset="1dp"
+					custom:progress_text_visibility="visible"
+
+					custom:progress_max="100"/>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="剩余雷数："
+			android:textColor="@color/font"
+			android:layout_marginLeft="10dp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:id="@+id/num_view"
+			android:textSize="20sp"
+			android:text="0"
+			android:textColor="@color/font"/>
+
+	</LinearLayout>
+
+	<com.DWI.MineSweep.MineView
+		android:id="@+id/mine_view"
+		android:layout_width="wrap_content"
+		android:layout_height="0dp"
+		android:layout_weight="1"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<com.facebook.shimmer.ShimmerFrameLayout
+			android:id="@+id/mainshimmer"
+			android:layout_width="0dp"
+			android:layout_height="40dp"
+			android:layout_weight="3"
+			android:layout_gravity="center">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/refresh_view"
+				android:textSize="22sp"
+				android:gravity="center"
+				android:text="重来"
+				android:layout_gravity="center"
+				android:textColor="#FFFFFF"/>
+
+		</com.facebook.shimmer.ShimmerFrameLayout>
+
+		<com.nightonke.jellytogglebutton.JellyToggleButton
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="40dp"
+			android:id="@+id/flag_view"
+			android:gravity="center"
+			android:layout_marginRight="40dp"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ADEDED</color>
+    <color name="colorPrimaryDark">#ADEDED</color>
+    <color name="colorAccent">#FF6381</color>
+	<color name="font">#ffffff</color>
+</resources>
